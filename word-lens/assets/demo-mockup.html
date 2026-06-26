@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background: #ffffff;
+    color: #2b2b2b;
+    padding: 30px 40px;
+    width: 900px;
+  }
+  h1 {
+    font-family: -apple-system, "Segoe UI", sans-serif;
+    font-size: 26px;
+    margin: 0 0 18px;
+    color: #111;
+  }
+  p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin: 0 0 16px;
+    color: #333;
+  }
+  .sel {
+    background: #cfe3ff;
+    border-radius: 2px;
+  }
+
+  /* ---- 下面这些样式直接搬自 content.js 的 STYLES，保证截图和真实效果一致 ---- */
+  .wl-trigger {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #1B2430;
+    color: #FFD9C2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.28);
+    border: 2px solid #FF6B4A;
+    font-family: -apple-system, "Segoe UI", "PingFang SC", sans-serif;
+  }
+  .wl-card {
+    position: absolute;
+    width: 300px;
+    background: #FAF7F0;
+    border: 1px solid #E4DFD3;
+    border-radius: 12px;
+    box-shadow: 0 16px 36px rgba(27,36,48,.22);
+    font-family: -apple-system, "Segoe UI", "PingFang SC", sans-serif;
+    color: #1B2430;
+    overflow: hidden;
+  }
+  .wl-card-header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 9px 8px 7px 14px; font-size: 10.5px; letter-spacing: .06em;
+    text-transform: uppercase; color: #8A8470; border-bottom: 1px solid #EFEBE0;
+  }
+  .wl-brand { display: flex; align-items: center; gap: 6px; }
+  .wl-dot { width: 6px; height: 6px; border-radius: 50%; background: #FF6B4A; }
+  .wl-close { font-size: 16px; color: #8A8470; padding: 2px 8px; }
+  .wl-original {
+    padding: 10px 14px 8px; font-family: Georgia, serif; font-size: 14px;
+    line-height: 1.5; color: #514C3E;
+  }
+  .wl-phonetic { font-family: -apple-system, sans-serif; font-size: 12px; color: #B07A55; margin-left: 6px; }
+  .wl-divider { height: 1px; background: #EFEBE0; margin: 0 14px; }
+  .wl-body { padding: 10px 14px 12px; }
+  .wl-translation {
+    font-family: Georgia, serif; font-size: 18px; font-weight: 600;
+    line-height: 1.45; margin-bottom: 10px;
+  }
+  .wl-dict {
+    margin: 2px 0 10px; padding: 8px 10px; background: #F1EEE3; border-radius: 8px;
+    font-size: 12.5px; line-height: 1.55; color: #514C3E;
+  }
+  .wl-dict-pos {
+    display: inline-block; font-size: 10.5px; color: #8A8470; border: 1px solid #DCD6C6;
+    border-radius: 4px; padding: 0 5px; margin-bottom: 4px;
+  }
+  .wl-dict-example { margin-top: 4px; color: #8A8470; font-style: italic; }
+  .wl-actions { display: flex; gap: 6px; }
+  .wl-btn {
+    border: none; background: #1B2430; color: #FAF7F0; font-size: 12px;
+    padding: 6px 11px; border-radius: 7px; font-family: inherit;
+  }
+  .wl-btn.secondary { background: transparent; color: #1B2430; border: 1px solid #DCD6C6; }
+  .wl-footer { font-size: 10px; color: #B8B2A0; padding: 0 14px 10px; text-align: right; }
+
+  .stage { position: relative; min-height: 460px; }
+</style>
+</head>
+<body>
+
+<div class="stage">
+  <h1>Smartphones and Modern Life</h1>
+  <p>
+    Over the past two decades, mobile technology has become
+    <span class="sel">ubiquitous</span> in everyday life. People rely on
+    their phones for communication, navigation, and entertainment,
+    often without thinking twice about how dependent they have become.
+  </p>
+  <p>
+    Researchers note that this shift happened faster than almost any
+    previous technological change in human history, reshaping habits,
+    relationships, and even the way we think.
+  </p>
+
+  <div class="wl-trigger" style="top: 70px; left: 330px;">译</div>
+
+  <div class="wl-card" style="top: 108px; left: 330px;">
+    <div class="wl-card-header">
+      <div class="wl-brand"><span class="wl-dot"></span>WordLens</div>
+      <div class="wl-close">×</div>
+    </div>
+    <div class="wl-original">
+      ubiquitous<span class="wl-phonetic">/juːˈbɪkwɪtəs/</span>
+    </div>
+    <div class="wl-divider"></div>
+    <div class="wl-body">
+      <div class="wl-translation">无处不在的；普遍存在的</div>
+      <div class="wl-dict">
+        <span class="wl-dict-pos">adjective</span><br/>
+        Present, appearing, or found everywhere.
+        <div class="wl-dict-example">"Smartphones have become ubiquitous in modern life."</div>
+      </div>
+      <div class="wl-actions">
+        <button class="wl-btn">复制</button>
+        <button class="wl-btn secondary">朗读</button>
+        <button class="wl-btn secondary">★ 收藏</button>
+      </div>
+    </div>
+    <div class="wl-footer">由 MyMemory / Free Dictionary API 提供数据 · WordLens 开源插件</div>
+  </div>
+</div>
+
+</body>
+</html>
